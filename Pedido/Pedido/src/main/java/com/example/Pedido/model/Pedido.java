@@ -18,10 +18,12 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = true)
     private LocalDate fecha;
 
     private double total;
 
+    @Column(nullable = false)
     private Long usuarioId; // Relación básica con Usuario
 
 }
