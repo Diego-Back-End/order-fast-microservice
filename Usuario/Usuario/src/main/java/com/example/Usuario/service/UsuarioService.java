@@ -6,10 +6,13 @@ import org.springframework.stereotype.Service;
 import com.example.Usuario.model.Usuario;
 import com.example.Usuario.repository.UsuarioRepository;
 
+import jakarta.transaction.Transactional;
+
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class UsuarioService {
 
     @Autowired
@@ -28,6 +31,7 @@ public class UsuarioService {
     }
 
     public Usuario actualizarUsuario(Long id, Usuario usuarioActualizado) {
+        // return usuarioRepository.save(usuarioActualizado);
         return usuarioRepository.findById(id).map(usuario -> {
             usuario.setNombre(usuarioActualizado.getNombre());
             usuario.setEmail(usuarioActualizado.getEmail());

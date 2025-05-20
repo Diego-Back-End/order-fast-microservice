@@ -2,8 +2,14 @@ package com.example.Pedido.model;
 
 
 import jakarta.persistence.*;
-import java.time.LocalDate;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "pedidos")
 public class Pedido {
@@ -18,40 +24,4 @@ public class Pedido {
 
     private Long usuarioId; // Relación básica con Usuario
 
-    public Pedido() {}
-
-    public Pedido(LocalDate fecha, double total, Long usuarioId) {
-        this.fecha = fecha;
-        this.total = total;
-        this.usuarioId = usuarioId;
-    }
-
-    // Getters y Setters
-    public Long getId() {
-        return id;
-    }
-
-    public LocalDate getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
-
-    public double getTotal() {
-        return total;
-    }
-
-    public void setTotal(double total) {
-        this.total = total;
-    }
-
-    public Long getUsuarioId() {
-        return usuarioId;
-    }
-
-    public void setUsuarioId(Long usuarioId) {
-        this.usuarioId = usuarioId;
-    }
 }
