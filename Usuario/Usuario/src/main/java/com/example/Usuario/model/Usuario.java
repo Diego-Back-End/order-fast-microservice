@@ -20,6 +20,7 @@ public class Usuario {
     @Column(nullable = false)
     private String nombre;
 
+    @Column(nullable = false)
     private String email;
 
     // Constructor vacío obligatorio para JPA
