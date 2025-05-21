@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+import jakarta.persistence.ManyToOne;
 import java.time.LocalDate;
 @Data
 @AllArgsConstructor
@@ -24,5 +24,8 @@ public class Pedido {
 
     @Column(nullable = false)
     private Long usuarioId; // Relación básica con Usuario
+
+    @ManyToOne
+    private Restaurante restaurante;
 
 }
