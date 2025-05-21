@@ -5,7 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.example.Pedido.model.Pedido;
 
-// PedidoRepository
+// esta interfaz es un componente de repositorio,
+//  la parte encargada de comunicarse con la base de datos.
 @Repository
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
+
 }
