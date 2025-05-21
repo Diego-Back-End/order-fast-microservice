@@ -1,6 +1,6 @@
 package com.example.Usuario.model;
 
-import jakarta.persistence.OneToMany;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,11 +23,6 @@ public class Usuario {
     @Column(nullable = false)
     private String email;
 
-    // Constructor vacío obligatorio para JPA
-    
-
-    @OneToMany
-    private Pedido pedido;
      
     
 }
